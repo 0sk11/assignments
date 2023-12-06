@@ -4,7 +4,19 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str = str.toLowerCase()
+  let arr1 = []
+  for(let i=0;i<str.length;i++){
+    if(str[i].match(/[a-z]/i)){
+      arr1.push(str[i])
+    }
+  }
+  console.log(arr1)
+  let arr2 = arr1.toReversed()
+
+  return JSON.stringify(arr1) === JSON.stringify(arr2);
 }
+
+console.log(isPalindrome('Able, was I ere I saw Elba!'))
 
 module.exports = isPalindrome;

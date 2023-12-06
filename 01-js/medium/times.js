@@ -9,5 +9,21 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    const timeNow = Date.now()
+    let sum = 0;
+    for(let i=0;i<n;i++){
+        sum+=i;
+    }
+
+    const timeAfterComputation = Date.now()
+
+    return (timeAfterComputation-timeNow)/1000;
 }
+
+const n100 = calculateTime(100)
+const n100000 = calculateTime(100000)
+const n1000000000 = calculateTime(1000000000)
+
+console.log(n100)
+console.log(n100000)
+console.log(n1000000000)
